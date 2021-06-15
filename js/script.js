@@ -74,6 +74,63 @@ for(var i = 0; i < squadre.length; i++) {
 }
 
 
+// Crea un array di 10 oggetti che rappresentano una zucchina, indicandone per ognuno varietà, peso e lunghezza. Calcola quanto pesano tutte le zucchine. (edited) 
+
+var zucchineNew = [];
+for (var i = 0; i < 10; i++) {
+    zucchineNew.push({
+        varieta : i,
+        peso : rand(1,5),
+        lunghezza : rand(1,30),
+    });
+}
+var sommaNew = 0;
+for( var i = 0; i < zucchineNew.length; i++){
+    sommaNew += zucchineNew[i].peso;
+}
+
+console.log('il peso delle zucchine è : ' + sommaNew + ' kg');
+
+
+
+
+// Crea un array di 10 oggetti che rappresentano una zucchina.
+// Dividi in due array separati le zucchine che misurano meno o più di 15cm. Infine stampa separatamente quanto pesano i due gruppi di zucchine (edited) 
+
+
+var zucchine = [];
+var zucchineLunghe = [];
+var zucchineCorte = [];
+sommaCorta =  0;
+sommaLunga = 0;
+for (var i = 0; i < 10; i++) {
+    // creo un array con 10 zucchine 
+    zucchine.push({
+        varieta : i,
+        peso : rand(1,5),
+        lunghezza : rand(1,30)
+    });
+    // controllo la lunghezza delle zucchine e sommo il peso
+    if (zucchine[i].lunghezza <= 15) {
+        zucchineCorte.push(zucchine[i]);
+        sommaCorta += zucchine[i].peso;
+    } else {
+        zucchineLunghe.push(zucchine[i]);
+        sommaLunga += zucchine[i].peso;
+    }
+}
+console.log(zucchine);
+console.log('Le zucchine corte pesano ' + sommaCorta + ' kg');
+console.log('Le zucchine lunghe pesano ' + sommaLunga + ' kg');
+
+
+
+
+
+
+
+
+
 
 
 
